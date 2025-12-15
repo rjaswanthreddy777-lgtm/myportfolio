@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Portfolio</title>
+
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{font-family:Arial, sans-serif; color:white;}
+
+        /* DEVICE BACKGROUND COLORS */
+        @media(max-width:600px){ body{background:#400a62;} }
+        @media(min-width:601px) and (max-width:1024px){ body{background:#079992;} }
+        @media(min-width:1025px){ body{background:#1e3799;} }
+
+        /* NAVBAR */
+        nav{
+            width:100%; position:sticky; top:0; background:rgba(0,0,0,0.6);
+            padding:15px 0; backdrop-filter:blur(6px);
+        }
+        nav ul{
+            display:flex; justify-content:center; gap:40px; list-style:none;
+        }
+        nav a{
+            color:white; font-size:20px; text-decoration:none; font-weight:bold;
+        }
+        nav a:hover{color:#f6b93b; transition:0.3s;}
+
+        /* SECTIONS */
+        section{padding:70px 20px; text-align:center;}
+        h1, h2{margin-bottom:20px;}
+        p{max-width:700px; margin:auto; font-size:18px;}
+
+        /* PROFILE */
+        .profile img{
+            width:200px; height:200px; border-radius:50%; border:4px solid greenyellow;
+            box-shadow:0 0 20px rgba(255,255,255,0.4); object-fit:cover; margin-top:20px;
+        }
+
+        /* BUTTON */
+        .btn{
+            padding:12px 25px; background:#f6b93b; color:black;
+            border-radius:30px; margin-top:20px; display:inline-block;
+            font-weight:bold; text-decoration:none; transition:0.3s;
+        }
+        .btn:hover{background:white; color:black;}
+
+        /* PROJECT CARDS */
+        .projects{
+            display:flex; justify-content:center; flex-wrap:wrap; gap:25px; margin-top:30px;
+        }
+        .card{
+            width:260px; background:yellowgreen; color:black;
+            padding:20px; border-radius:15px;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+        .card:hover{transform:scale(1.05);}
+
+        /* CONTACT */
+        .contact-box{
+            background:green; width:320px; padding:20px;
+            margin:auto; color:black;
+            border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+
+        /* LOGIN */
+        .login-box{
+            background:pink; width:300px; padding:25px;
+            margin:auto; color:black; border-radius:10px;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+        input{
+            width:100%; padding:10px; margin-bottom:15px;
+            border:1px solid gray; border-radius:5px;
+        }
+        button{
+            width:100%; padding:12px; background:#38ada9;
+            border:none; border-radius:5px; color:yellowgreen;
+            font-weight:bold; cursor:pointer; font-size:16px;
+        }
+        button:hover{background:#079992;}
+        
+
+    </style>
+    <link rel="icon" href="jashu.jpeg">
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login">Login</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <h2>This is Jaswanth Reddy</h2>
+    <p>A beautiful responsive website created  by using front end.</p>
+
+    <div class="profile">
+        <img src="jashu.jpeg" alt="jaswanth ">
+    </div>
+
+    <a class="btn" href="#projects">View My Projects</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am learning web development, Java, SQL and working on multiple projects.
+       This is my beautiful personal portfolio website design.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Automatic Lighting</h3>
+            <p>Smart lighting system using sensors.</p>
+        </div>
+        <div class="card">
+            <h3>Visitor Counter</h3>
+            <p>IR sensor based counting system.</p>
+        </div>
+        <div class="card">
+            <h3>Student Management System</h3>
+            <p>Java + File handling project.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+        <p>Email : rjaswanthreddy777@gmail.com</p>
+        <p>Phone : 7989141730</p>
+    </div>
+</section>
+
+<section id="login">
+    <h2>Login</h2>
+    <div class="login-box">
+        <input type="text" placeholder="Enter Username">
+        <input type="password" placeholder="Enter Password">
+        <button>Login</button>
+    </div>
+</section>
+
+    <!-- Smooth Scroll -->
+    <style>
+        html{ scroll-behavior:smooth; }
+
+        /* Fade Animation */
+        .fade{
+            opacity:0;
+            transform:translateY(20px);
+            animation:fadeIn 1s forwards;
+        }
+        @keyframes fadeIn{
+            to{ opacity:1; transform:none; }
+        }
+
+        /* Skills Section */
+        #skills{
+            padding:70px 20px; text-align:center;
+        }
+        .skill-bars{
+            width:80%; margin:auto; margin-top:30px;
+        }
+        .skill{
+            margin-bottom:20px; text-align:left;
+        }
+        .skill p{ margin-bottom:8px; }
+        .bar{
+            height:15px; background:white; border-radius:10px;
+        }
+        .progress{
+            height:15px; background:#f6b93b; border-radius:10px;
+        }
+
+        /* Resume Button */
+        .resume-btn{
+            padding:12px 25px; background:white; color:black;
+            border-radius:30px; margin-top:25px; display:inline-block;
+            font-weight:bold; text-decoration:none;
+        }
+    </style>
+
+<section id="skills" class="fade">
+    <h2>My Skills</h2>
+    <div class="skill-bars">
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar"><div class="progress" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+            <p>Java</p>
+            <div class="bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+        <div class="skill">
+            <p>SQL</p>
+            <div class="bar"><div class="progress" style="width:75%"></div></div>
+        </div>
+    </div>
+
+    <a class="resume-btn" href="Professional Resume.pdf" download>Download Resume</a>
+</section>
+
+</body>
+</html>
